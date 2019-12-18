@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> Your Garden</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="isi.css">
+</head>
+<body>
+<div class="nav">
+  <input type="checkbox" id="nav-check">
+  <div class="nav-header">
+    <div class="nav-title">
+      <marquee>Your Garden</marquee>
+    </div>
+  </div>
+  <div class="nav-btn">
+    <label for="nav-check">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+  </div>
+  
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+        
+    <!-- <a class="menu-cari">
+      <p><input class="menu-cari" type="text" placeholder="Cari..."><input class="menucari" type="button" value="Cari"></p>
+    </a> -->
+  </div>
+
+</div>
+
+<div class="kotak_login">
+  <p class="tulisan_login">Silahkan datar</p>
+  
+
+  <form action="#" method="POST" onSubmit="validasi()">
+    <label>nama     </label><br>
+    <input type="text" nama="name" class="form_login" placeholder="nama" id="nama"><br>
+    <label>email    </label><br>
+    <input type="text" name="email" class="form_login" placeholder="email" id="email"><br>
+    <label>No Telp  </label><br>
+    <input type="text" name="No Telp" class="form_login" placeholder="No Telp" id="NoTelp"><br>
+    <label>Password </label><br>
+    <input type="text" name="password" class="form_login" placeholder="Password"><br>
+    <label>Password </label><br>
+    <input type="text" name="password" class="form_login" placeholder="Password"><br>
+
+    <input type="submit" class="tombol_login" value="daftar">
+
+    <br/>
+    <br/>
+    <center>
+      <a class="link" href="login.html" >loginr</a>
+      <a class="link" href="index.html"">kembali</a>
+    </center>
+  </form>
+</div>
+</body>
+<script type="text/javascript">
+  function validasi() {
+    var nama = document.getElementById("nama").value;
+    var email = document.getElementById("email").value;
+    var alamat = document.getElementById("NoTelp").value;
+    if (nama != "" && email!="" && alamat !="") {
+      return true;
+    }else{
+      alert('Anda harus mengisi data dengan lengkap !');
+    }
+  }
+</script>
+
+
+</body>
+</html>
