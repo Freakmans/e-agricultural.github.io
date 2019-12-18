@@ -1,16 +1,86 @@
+<!DOCTYPE html>
 <html>
+<head>
+  <title> Your Garden</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="isi.css">
+</head>
 <body>
-<table border="4" bgcolor="#A7F16D" align="center" height="500" width="600" cellpadding="30">
-<div >
- <tr>
-<td><form align="left">
-<a>email</a><br>
-<input type="Text" Name="email" size="40" placeholder="email">
-<input type="password" Name="kata sandi" size="40" placeholder="kata sandi"><br>
-<input type="submit" value="Daftar" style="background-color: lightgrey; height: 50; width: 150;">
-</form>
-</td>
-</tr>
+<div class="nav">
+  <input type="checkbox" id="nav-check">
+  <div class="nav-header">
+    <div class="nav-title">
+      <marquee>Your Garden</marquee><
+    </div>
+  </div>
+  <div class="nav-btn">
+    <label for="nav-check">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+  </div>
+  
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+<!--     <a href="login.html">login</a>
+    <a href="register.html">register</a>        -->
+    <!-- <a class="menu-cari">
+      <p><input class="menu-cari" type="text" placeholder="Cari..."><input class="menucari" type="button" value="Cari"></p>
+    </a> -->
+  </div>
 </div>
+<div class="kotak_login">
+  <p class="tulisan_login">Silahkan login</p>
+  
+
+  <form>
+    <label>Username</label>
+    <input type="text" name="username" id="username" class="form_login" placeholder="Username atau email ..">
+
+    <label>Password</label>
+    <input type="text" name="password" id="password" class="form_login" placeholder="Password ..">
+
+    <input type="button" class="tombol_login" id="submit" value="LOGIN" onclick="validate()" >
+
+    <br/>
+    <br/>
+    <center>
+    	<a class="link" href="register.html">Daftar</a>
+    	<a class="link" href="index.html"">kembali</a>
+    </center>
+  </form>
+</div>
+
 </body>
+<script src="jquery-3.4.1.min.js"></script>
+<script type="text/javascript">
+	var attempt = 3; // Variable to count number of attempts.
+// Below function Executes on click of login button.
+function validate(){
+var username = document.getElementById("username").value;
+var password = document.getElementById("password").value;
+if ( username == "barep" && password == "kui12345"){
+alert ("Login successfully");
+window.location = "L.index.html"; // Redirecting to other page.
+return false;
+}
+if ( username == "admin" && password == "admin"){
+alert ("Login successfully");
+window.location = "admin.html"; // Redirecting to other page.
+return false;
+}
+else{
+attempt --;// Decrementing by one.
+alert("You have left "+attempt+" attempt;");
+// Disabling fields after 3 attempts.
+if( attempt == 0){
+document.getElementById("username").disabled = true;
+document.getElementById("password").disabled = true;
+document.getElementById("submit").disabled = true;
+return false;
+}
+}
+}
+</script>
 </html>

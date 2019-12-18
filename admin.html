@@ -8,8 +8,8 @@
     figure input{
       width: 100%
 
-    }ss
-  </style>t
+    }
+  </style>
 </head>
 <body>
 <div class="nav">
@@ -38,9 +38,11 @@
 <aside class="sidebar">
       <br><br>
       <div class="widget">
-        <a class="button" href="login.html">login</a></button>
-        <a class="button" href="register.html">daftar</a></button>
-        <a class="button" href="Keranjang.html">Keranjang</a></button> <br>
+
+        <a class="button" href="profil.html">Profil</a></button>
+        <a class="button" href="login.html">logout</a></button>
+        <a class="button" onclick="openForm2()">tambah barang</a></button>
+        <a class="button" onclick="openForm()">edit Rumus Perhitungan ph</a></button> <br>
 
       </div>
       <div class="widget">     
@@ -48,38 +50,58 @@
         <input class="search" type="text" placeholder="Cari..." required>
         <a class="button" type="button" value="Cari"> cari</a>
       </form>
-        </div>
-        <div>
-    <a class="button" href="index.html">Home</a>
-    <a class="button" href="tanaman.html">Tanaman</a>
-    <a class="button" href="alat.html">alat</a>
-    <a class="button" href="kebutuhan.html">kebutuhan tanaman</a>
-    <a class="button" onclick="openForm()">perhitungan</a>
-        </div>
-    </aside>
-     <div class="form-popup" id="myForm">
+        <div class="form-popup" id="myForm">
   <form action="/action_page.php" class="form-container">
     <h1>Perhitungan</h1>
 
-    <label for="ph"><b>Ph Tanah</b></label>
-    <input type="text" placeholder="Enter ph" name="ph" required>
+    <label for="ph"><b>atribut 1</b></label>
+    <input type="text" placeholder="" name="" required>
 
-    <label for="psw"><b>Kelembapan tanah</b></label>
-    <input type="text" placeholder="Enter ph" name="kelembapan" required>
-    <button type="submit" class="btn">hasil</button>
+    <label for="psw"><b>atribut 2</b></label>
+    <input type="text" placeholder="" name="" required>
 
-    <label for="psw"><b>hasil</b></label>
-    <input type="text" placeholder="Enter ph" name="kelembapan" required>
+    <label for="ph"><b>atribut 3</b></label>
+    <input type="text" placeholder="" name="" required>
+
+    <label for="ph"><b>atribut 4</b></label>
+    <input type="text" placeholder="" name="" required>
+
+    <label for="ph"><b>Rumus</b></label>
+    <input type="text" placeholder="" name="ph" required>
+    <button type="submit" class="btn">generate</button>
     <button type="submit" class="btn cancel" onclick="closeForm()">Close</button>
   </form>
+</div>
+<div class="form-popup" id="lala">
+  <form action="/action_page.php" class="form-container">
+    <div class="Neon Neon-theme-dragdropbox">
+        <input style="z-index: 999; opacity: 0; width: 320px; height: 200px; position: absolute; right: 0px; left: 0px; margin-right: auto; margin-left: auto;" name="files[]" id="filer_input2" multiple="multiple" type="file">
+        <div class="Neon-input-dragDrop"><div class="Neon-input-inner"><div class="Neon-input-icon"><i class="fa fa-file-image-o"></i></div><div class="Neon-input-text"><h3>Drag&amp;Drop files here</h3> <span style="display:inline-block; margin: 15px 0">or</span></div><a class="Neon-input-choose-btn blue">Browse Files</a></div></div>
+        </div>
+
+    <label for="ph"><b>Nama</b></label>
+    <input type="text" placeholder="" name="" required>
+
+    <label for="psw"><b>harga</b></label>
+    <input type="text" placeholder="" name="" required>
+
+    <label for="ph"><b>stock</b></label>
+    <input type="text" placeholder="" name="" required>
+    
+    <button type="submit" class="btn">generate</button>
+    <button type="submit" class="btn cancel" onclick="closeForm2()">Close</button>
+  </form>
 </div> 
+</div>
+</aside>
+
 <div id="columns" class="columns_5" page="">
   <figure>
   <img src="bibit apel.jpg">
   <marquee><figcaption>Bibit apel Super</figcaption></marquee>
     <span class="price">$2</span>
     <input type="number" name="">
-    <a class="button" href="#">Buy Now</a>
+    <a class="button" href="#">edit</a>
   </figure>
   
   <figure>
@@ -87,7 +109,7 @@
   <marquee><figcaption>Bibit apel Super</figcaption></marquee>
     <span class="price">$2</span>
     <input type="number" name="">
-    <a class="button" href="#">Buy Now</a>
+    <a class="button" href="#">edit</a>
   </figure>
   
   <figure>
@@ -95,7 +117,7 @@
   <marquee><figcaption>Bibit apel Super</figcaption></marquee>
     <span class="price">$2</span>
     <input type="number" name="">
-    <a class="button" href="#">Buy Now</a>
+    <a class="button" href="#">edit</a>
   </figure>
   
   <figure>
@@ -103,7 +125,7 @@
   <marquee><figcaption>Bibit apel Super</figcaption></marquee>
     <span class="price">$2</span>
     <input type="number" name="">
-    <a class="button" href="#">Buy Now</a>
+    <a class="button" href="#">edit</a>
   </figure>
   
    <figure>
@@ -111,7 +133,7 @@
   <marquee><figcaption>Bibit apel Super</figcaption></marquee>
     <span class="price">$2</span>
     <input type="number" name="">
-    <a class="button" href="#">Buy Now</a>
+    <a class="button" href="#">edit</a>
   </figure>
 
   <figure>
@@ -119,7 +141,7 @@
   <marquee><figcaption>Bibit apel Super</figcaption></marquee>
     <span class="price">$2</span>
     <input type="number" name="">
-    <a class="button" href="#">Buy Now</a>
+    <a class="button" href="#">edit</a>
   </figure>
   
   <figure>
@@ -127,7 +149,7 @@
   <marquee><figcaption>Bibit apel Super</figcaption></marquee>
     <span class="price">$2</span>
     <input type="number" name="">
-    <a class="button" href="#">Buy Now</a>
+    <a class="button" href="#">edit</a>
   </figure>
   
   <figure>
@@ -135,7 +157,7 @@
   <marquee><figcaption>Bibit apel Super</figcaption></marquee>
     <span class="price">$2</span>
     <input type="number" name="">
-    <a class="button" href="#">Buy Now</a>
+    <a class="button" href="#">edit</a>
   </figure>
   
   <figure>
@@ -143,7 +165,7 @@
   <marquee><figcaption>Bibit apel Super</figcaption></marquee>
     <span class="price">$2</span>
     <input type="number" name="">
-    <a class="button" href="#">Buy Now</a>
+    <a class="button" href="#">edit</a>
   </figure>
 
   <figure>
@@ -151,7 +173,7 @@
   <marquee><figcaption>Bibit apel Super</figcaption></marquee>
     <span class="price">$2</span>
     <input type="number" name="">
-    <a class="button" href="#">Buy Now</a>
+    <a class="button" href="#">edit</a>
   </figure>
 
   <figure>
@@ -159,7 +181,7 @@
   <marquee><figcaption>Bibit apel Super</figcaption></marquee>
     <span class="price">$2</span>
     <input type="number" name="">
-    <a class="button" href="#">Buy Now</a>
+    <a class="button" href="#">edit</a>
   </figure>
   
   <figure>
@@ -167,7 +189,7 @@
   <marquee><figcaption>Bibit apel Super</figcaption></marquee>
     <span class="price">$2</span>
     <input type="number" name="">
-    <a class="button" href="#">Buy Now</a>
+    <a class="button" href="#">edit</a>
   </figure>
 
 </div>
@@ -221,6 +243,13 @@
       console.log('error');
     })
   });
+  function openForm2() {
+  document.getElementById("lala").style.display = "block";
+}
+
+function closeForm2() {
+  document.getElementById("lala").style.display = "none";
+} 
   function openForm() {
   document.getElementById("myForm").style.display = "block";
 }
@@ -228,6 +257,7 @@
 function closeForm() {
   document.getElementById("myForm").style.display = "none";
 } 
+
 </script>
 </body>
 </html>
